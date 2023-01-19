@@ -1,0 +1,143 @@
+ANGULAR 
+
+-Que es angular
+angular es un framework de codigo abierto basado en typescript con el cual podemos 
+crear aplicaciones web mobile y de escritorio algunas caracteristicas de este
+framework son las plantillas declarativas y la inyeccion de dependencias.
+
+-Cuales son las diferencias entre angularJs y angular.
+Angular es un framework basado en componentes diferente al predecesor, esta reescrito 
+y la sintaxis es diferente y claramente es mobile friendly
+AngularJS esta basado en el patron MVC y tenemos que escribir JS y no es mobile friendly.
+
+-Que son las directivas
+las directivas añaden comportamento a un elemento del dom ya existente.
+
+-Que es un componente
+un componente controla una parte de la pantalla llamada vista los componentes son 
+bloques de construccion de interfaz de usuario, estos componentes son subconjuntos 
+de directivas pero a diferencias de las directivas los componetes siempre tienen una
+plantilla un html.
+
+-Que es angular CLI
+Angular CLI (Comman line interface) es una interfaz de linea de comandos para montar y 
+construir aplicaciones de angular.
+
+-Cual es la diferencia entre constructor y ngOnInint
+las clases de typescript tienen un metodo predeterminado llamado constructor que 
+normalmente se utiliza con fines de inicializacion mientras que el metodo ngOnInit
+es especifico de angular y se usa para definir el binding el constructor se ejecuta primero
+que el metodo ngOnInit y para utilizar el ngOnInit debemos implementar la interface OnInit
+
+-Diga algunas directivas estructurales
+las directivas estructurales permiten añadir manipular o eliminar elementos del DOM ejemplo de 
+ella son ngif o ngfor
+
+-Cual es el proposito de la directiva ngIf
+aveces una aplicacion necesita mostrar ciertas vistas dependiendo de ciertas circunstancias
+especificas la directiva ngif inserta o elimina elementos del dom basado en una condicion 
+true o false
+
+-Que es la interpolacion
+la interpolacion es una sintaxis especial de angular que permite hacer el binding de una
+propiedad, es una alternativa de la propierty binding y esta representado por dobles llaves.
+
+-Que son los pipes
+un pipe toma datos como entrada y los transforma en una salida deseada.
+
+-Que son los custom pipes
+Ademas de las pipes que trae angular, podemos crear nuestro propios pipes
+Un pipe es una clse decorada con metadatos de pipe @decorador, que importa desde la angular core
+
+-Cual es la diferencia entre un PIPE puro e impuro
+Un pipe puro solo se llama cuando angular detecta un cambio en el valor o en los parametros pasados a un pipe
+Por ejemplo cualquier cambio en un valor de entrada primitivo o una referencia de objeto modificada
+Mientras que un pipe impuro, es llamado cada ciclo de deteccion de cambios (change detection) sin importar el 
+valor o los parametros cambian, un pipe impuro se puede lamar con cada pulsacion de tecla o movimiento del mouse.
+
+-Que es httpClient
+La mayoria de las aplicaciones frontend se comunican con los servidores de backend a traves de protocolo http
+angular proporciona una api Http de cliente simplificada conocida como httpClient que se basa en XmlHttpRequest
+Esta libreria esta en @angular/common/http
+
+-Como se realiza el manejo de errores
+Si una peticion falla en el servidor o no pudo llegar al servidor debido a problemas de red httpClient devolvera
+un objeto de error en lugar de una respuesta correcta. En este caso se debe manejar el error, pasando el objeto de error 
+como segundo parametro en la llamada al metodo subscribe()
+
+-Que son los componetes dinamicos
+los componetes dinamicos son componetes que su ubicacion en la aplicacion no esta definicda en el momento de la 
+compilacion, es decir, no se utilizan en ninguna plantilla de angular. Pero el componente se instancia en la 
+aplicacion en tiempo de ejecucion
+
+-Cuales son los distintos tipos de directivas.
+Hay principalmente tres tipos de directivas.
+Componentes: son directivas con plantilla
+Directivas estructurales: estas directivas pueden cambiar el diseño del DOM al agregar o eliminar elementos
+Directivas de atributos: estas directivas cambian la apariencia oel comportamiento de un elemento, componente u otra directiva
+
+-Como se crean directivas con angular CLI
+con el comando CLI ng generate directive creara una clase de tipo directiva. Esto creara el archivo fuente y el archivo
+de testing y declara la directiva en el modulo raiz.
+
+-Cuales son los diferentes tipos de compilacion en angular.
+Just-in-Time JIT
+Ahead-of-time AOT
+
+//*************************************************************************************************************
+.NET - C#
+-Cuales son las diferencias entre una clase y una interfaz en C#
+Una clase es como una plantilla que se usa para la creacion de objetos, contiene la definicion de metodos, propiedades y 
+constructor. Contiene un comportamiento predeterminado para los objetos que se van a crear.
+Una interfaz es un contrato o tipo abstracto que se utiliza para garantizar las propiedades y metodos. Se usan para implementar
+patrones de diseño, principios de buenas practicas y pruebas unitarias. 
+
+-Como se define el constructor de una clase en C#
+Es un metodo que no devuelve nada y se llama igual que la clase.
+Public class Person{
+	private string last; private string first;
+	public Person (string lastName, string firstName){last = lastName; firs = firsname}
+}
+
+-Que son los modificadoes de acceso y como funciona, menciona 2 de ellos?
+Permiten especificar el alcance de clses metodos y propiedas.
+Public: Puede accedido por donde dentro y fuera del contexto
+Private: solo puede ser accedido dentro del contexto.
+Internal: Acceso por todos los componetes del Assembly
+
+-Es posible heredar de multiples clases en C#?
+Solo se puede heredar de una sola clase unicamente
+public class User : BaseUser{}
+
+-Es posible implementar multiples interfaces en C#?
+Es posible implementar multiples interfaces y es buena practica que hace parte de los principios SOLID, segregacion de interfaces
+public class User: IUser, ISecurity, IBaseModel{}
+
+-Menciona 2 buenas practicas que apliques al escribir codigo en C#
+Nombramiento: asignar nombres claros y descriptivos a las variables metodos y clases
+Evitar enviar muchos parametros a un metodo.
+Asignar una unica responsabilidad a cada componente en el codigo. Aplicando principios SOLID.
+
+-Que es el CLR
+Es el Common Language Runtime
+Compila el codigo a un lenguaje intermedio comun Common Intermediate Language
+
+-Que es el garbage collector?
+Es un componente el CLR sirve para administrar la memoria de manera automatica
+Libera la memoria de los componentes que no se usan en el sistema y provee una manera segura de administrarla
+Unmanged resources o recursos no administrados deben manejarse de manera manual usando el metodo Dispose()
+
+-Que es un metodo virtual en C#
+Significa que el metodo puede sobreescribirse lo cual permite aplicar el principio de polimorfismo.
+public virtual double Area() { return x*y } 
+public override double Area() { return x *y*2 }
+
+-Que es LINQ y como funciona?
+Language-Integrated Query (LINQ) es un conjunto de extensiones que permite trabajar manipulcaion de datos de una manera 
+facil y simple. Query expression y metodo de extension
+Query: var esCuatro = from c in cadenas where c == "Cuatro" select c;
+Metodo : var estudiantes = estudiantes.Where(p => (p.Codigo_Curso == "C001" && p.Edad > 18)
+Permite realizar operaciones sobre colecciones, minimizar el codigo y mejorar el rendimiento.
+
+
+
